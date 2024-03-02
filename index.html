@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cadastro de Dados</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cadastro de Dados</h1>
+        <form id="cadastroForm">
+            <label for="dataChegada">Data de Chegada:</label>
+            <input type="text" id="dataChegada" required>
+
+            <label for="numeroCTE">Número do CTE:</label>
+            <input type="text" id="numeroCTE" required>
+
+            <label for="nomeMotorista">Nome do Motorista:</label>
+            <input type="text" id="nomeMotorista" required>
+
+            <button type="button" onclick="cadastrarDados()">Cadastrar</button>
+        </form>
+
+        <table id="dadosTable">
+            <thead>
+                <tr>
+                    <th>Data de Chegada</th>
+                    <th>Número do CTE</th>
+                    <th>Nome do Motorista</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div id="menuSaida" class="menuSaida">
+            <p>O que você gostaria de fazer?</p>
+            <button type="button" onclick="novoDocumento()">Incluir Novo Documento</button>
+            <button type="button" onclick="sair()">Sair</button>
+        </div>
+
+        <div id="menuSair" class="menuSair">
+            <p>Deseja salvar os dados em um arquivo Excel?</p>
+            <button type="button" onclick="salvar()">Salvar</button>
+            <button type="button" onclick="gerarExcel()">Gerar Excel</button>
+            <!-- Adicione um botão para exibir os dados -->
+            <button type="button" id="exibirDadosBtn">Exibir Dados e Salvar</button>
+
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
